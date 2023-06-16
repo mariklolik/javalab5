@@ -20,6 +20,19 @@ public class Fabric implements Runnable {
 
 
     BlockingQueue<Engine> engineStorage;
+
+    public BlockingQueue<Engine> getEngineStorage() {
+        return engineStorage;
+    }
+
+    public BlockingQueue<Body> getBodyStorage() {
+        return bodyStorage;
+    }
+
+    public BlockingQueue<Accessories> getAccessoriesStorage() {
+        return accessoriesStorage;
+    }
+
     BlockingQueue<Body> bodyStorage;
 
     BlockingQueue<Accessories> accessoriesStorage;
@@ -31,10 +44,10 @@ public class Fabric implements Runnable {
     BlockingQueue<Car> carsStorage;
 
     Fabric() {
-        engineStorage = new ArrayBlockingQueue<>(Configuration.engineStorageCapacity);
-        bodyStorage = new ArrayBlockingQueue<>(Configuration.carBodyStorageCapacity);
-        accessoriesStorage = new ArrayBlockingQueue<>(Configuration.accessoriesStorageCapacity);
-        carsStorage = new ArrayBlockingQueue<>(Configuration.carStorageCapacity);
+        engineStorage = new ArrayBlockingQueue<>(Configuration.getEngineStorageCapacity());
+        bodyStorage = new ArrayBlockingQueue<>(Configuration.getCarBodyStorageCapacity());
+        accessoriesStorage = new ArrayBlockingQueue<>(Configuration.getAccessoriesStorageCapacity());
+        carsStorage = new ArrayBlockingQueue<>(Configuration.getCarStorageCapacity());
 
     }
 
@@ -43,17 +56,17 @@ public class Fabric implements Runnable {
     public void run() {
         ExecutorService engineProducer = Executors.newSingleThreadExecutor();
         ExecutorService bodyProducer = Executors.newSingleThreadExecutor();
-        ExecutorService accessoriesProducer = Executors.newFixedThreadPool(Configuration.numberOfSuppliers);
-        ExecutorService carsProducer = Executors.newFixedThreadPool(Configuration.numberOfWorkers);
+        ExecutorService accessoriesProducer = Executors.newFixedThreadPool(Configuration.getNumberOfSuppliers());
+        ExecutorService carsProducer = Executors.newFixedThreadPool(Configuration.getNumberOfWorkers());
 
-        Runnable engineProducerTask = new EngineSupplier(engineStorage, Configuration.engineSupplierDelay);
-        Runnable bodyProducerTask = new BodySupplier(bodyStorage, Configuration.bodySupplierDelay);
-        for (int i = 0; i < Configuration.numberOfSuppliers; ++i) {
-            Runnable accessoriesProducerTask = new AccessoriesSupplier(accessoriesStorage, Configuration.accessoriesSupplierDelay);
+        Runnable engineProducerTask = new EngineSupplier(engineStorage);
+        Runnable bodyProducerTask = new BodySupplier(bodyStorage);
+        for (int i = 0; i < Configuration.getNumberOfSuppliers(); ++i) {
+            Runnable accessoriesProducerTask = new AccessoriesSupplier(accessoriesStorage);
             accessoriesProducer.submit(accessoriesProducerTask);
         }
 
-        for (int i = 0; i < Configuration.numberOfWorkers; ++i) {
+        for (int i = 0; i < Configuration.getNumberOfWorkers(); ++i) {
             Runnable carsProducerTask = new CarBuilder(engineStorage, bodyStorage, accessoriesStorage, carsStorage);
             carsProducer.submit(carsProducerTask);
         }

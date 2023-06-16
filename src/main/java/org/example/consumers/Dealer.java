@@ -31,7 +31,7 @@ public class Dealer implements Runnable {
                                 car.getAccessories().getID()
 
                         ));
-                Thread.sleep(Configuration.dealerDelay);
+                Thread.sleep(Configuration.getDealerDelay());
             } catch (InterruptedException ex) {
                 Fabric.logger.
                         log("[ERROR] CarBuilder# " + Thread.currentThread().getName() + " was interrupted");

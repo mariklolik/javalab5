@@ -1,18 +1,18 @@
 package org.example.suppliers;
 
+import org.example.Configuration;
 import org.example.Fabric;
 import org.example.details.Engine;
+import org.example.view.FabricView;
 
 
 import java.util.concurrent.BlockingQueue;
 
-public class EngineSupplier implements Runnable, Supplier {
+public class EngineSupplier implements Runnable {
     private final BlockingQueue<Engine> engineStorage;
-    private long delay;
 
-    public EngineSupplier(BlockingQueue<Engine> engineStorage, long delay) {
+    public EngineSupplier(BlockingQueue<Engine> engineStorage) {
         this.engineStorage = engineStorage;
-        this.delay = delay;
     }
 
     @Override
@@ -23,8 +23,8 @@ public class EngineSupplier implements Runnable, Supplier {
                 Fabric.logger
                         .log("[INFO] 🔥Producer# " + Thread.currentThread().getName() + " supplied engine #" + engine.getID());
                 engineStorage.put(engine);
-
-                Thread.sleep(delay);
+                FabricView.updateEngineArraySize(engineStorage.size());
+                Thread.sleep(Configuration.getEngineSupplierDelay());
 
             } catch (InterruptedException e) {
                 Fabric.logger
@@ -35,13 +35,4 @@ public class EngineSupplier implements Runnable, Supplier {
         }
     }
 
-    @Override
-    public long getDelay() {
-        return this.delay;
-    }
-
-    @Override
-    public void setDelay(long newDelay) {
-        this.delay = newDelay;
-    }
 }

@@ -5,6 +5,7 @@ import org.example.details.Accessories;
 import org.example.details.Body;
 import org.example.details.Car;
 import org.example.details.Engine;
+import org.example.view.FabricView;
 
 
 import java.util.concurrent.BlockingQueue;
@@ -27,40 +28,43 @@ public class CarBuilder implements Runnable {
     public void run() {
 
         while (true) {
-            Engine engine = null;
-            Body body = null;
-            Accessories accessories = null;
+            Engine engine;
+            Body body;
+            Accessories accessories;
 
             try {
                 engine = enginesStorage.take();
-
+                FabricView.updateEngineArraySize(enginesStorage.size());
                 Fabric.logger.
-                        log("[INFO] CarBuilder# " + Thread.currentThread().getName() + " taken ENGINE #" + engine.getID());
+                        log("[INFO] CarBuilder# " + Thread.currentThread().getName() + " taken Motor: " + engine.getID() + ",");
             } catch (InterruptedException ex) {
                 Fabric.logger.
                         log("[ERROR] CarBuilder# " + Thread.currentThread().getName() + " was interrupted");
+                return;
 
             }
 
             try {
                 body = bodiesStorage.take();
-
+                FabricView.updateBodyArraySize(bodiesStorage.size());
                 Fabric.logger.
                         log("[INFO] CarBuilder# " + Thread.currentThread().getName() + " taken BODY #" + body.getID());
             } catch (InterruptedException ex) {
                 Fabric.logger.
                         log("[ERROR] CarBuilder# " + Thread.currentThread().getName() + " was interrupted");
+                return;
 
             }
 
             try {
                 accessories = accessoriesStorage.take();
-
+                FabricView.updateAccessoriesArraySize(accessoriesStorage.size());
                 Fabric.logger.
                         log("[INFO] CarBuilder# " + Thread.currentThread().getName() + " taken ACCESSORIES #" + accessories.getID());
             } catch (InterruptedException ex) {
                 Fabric.logger.
                         log("[ERROR] CarBuilder# " + Thread.currentThread().getName() + " was interrupted");
+                return;
 
             }
 
@@ -70,11 +74,12 @@ public class CarBuilder implements Runnable {
                 Fabric.logger
                         .log("[INFO] 🚗CarBuilder# " + Thread.currentThread().getName() + " made a car #" + car.getID());
                 carStorage.put(car);
-
+                FabricView.updateCarsArraySize(carStorage.size());
 
             } catch (InterruptedException e) {
                 Fabric.logger.
                         log("[ERROR] CarBuilder# " + Thread.currentThread().getName() + " was interrupted");
+                return;
 
             }
 
@@ -82,3 +87,4 @@ public class CarBuilder implements Runnable {
 
     }
 }
+

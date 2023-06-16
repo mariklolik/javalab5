@@ -4,33 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e67c83-c423-4272-b55b-74254c76fcb1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Fabric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/consumers/CarBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/consumers/Dealer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/details/Accessories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/details/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/details/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/details/CarPart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/details/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/AccessoriesSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/BodySupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/EngineSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/Supplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/IdGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/configuration.properties" afterDir="false" />
+    <list default="true" id="51e67c83-c423-4272-b55b-74254c76fcb1" name="Changes" comment="LAB DONE!">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Fabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Fabric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/consumers/CarBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/consumers/CarBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/suppliers/AccessoriesSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/AccessoriesSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/suppliers/BodySupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/BodySupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/suppliers/EngineSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/suppliers/EngineSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configuration.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -70,6 +57,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/NSU/oopjava/lab5_2/javalab5&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -116,11 +104,65 @@
       <updated>1684831461434</updated>
       <workItem from="1684831462579" duration="7813000" />
       <workItem from="1684908973413" duration="90000" />
-      <workItem from="1684909085934" duration="19024000" />
+      <workItem from="1684909085934" duration="25845000" />
+      <workItem from="1685029117974" duration="1000" />
+      <workItem from="1685031532920" duration="33000" />
+      <workItem from="1685082864285" duration="2742000" />
+      <workItem from="1685085630128" duration="87000" />
+      <workItem from="1686880295601" duration="2844000" />
+      <workItem from="1686884522753" duration="869000" />
+      <workItem from="1686885437157" duration="17000" />
+      <workItem from="1686885670747" duration="41000" />
+      <workItem from="1686885778013" duration="1960000" />
     </task>
+    <task id="LOCAL-00001" summary="LAB DONE!">
+      <created>1684948593877</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684948593877</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LAB DONE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="LAB DONE!" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
